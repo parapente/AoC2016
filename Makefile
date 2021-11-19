@@ -2,7 +2,7 @@ CXX=clang++
 LIBCXX=-lstdc++
 OPT=-g -pedantic -Wall -Wfatal-errors
 STD=-std=c++17
-PROGS=01a.c++ 01b.c++ 02a.c++ 02b.c++ 03a.c++ \
+PROGS=01a.c++ 01b.c++ 02a.c++ 02b.c++ 03a.c++ 03b.c++ \
 	  04a.c++ 04b.c++ 05a.c++ 05b.c++ 06a.c++ 06b.c++ \
 	  07a.c++ 07b.c++ 08.c++
 
@@ -22,6 +22,9 @@ all: $(PROGS)
 
 03a.c++: 03a.cc
 	$(CXX) 03a.cc $(LIBCXX) $(OPT) $(STD) -o 03a.c++
+
+03b.c++: 03b.cc
+	$(CXX) 03b.cc $(LIBCXX) $(OPT) $(STD) -o 03b.c++
 
 04a.c++: 04a.cc
 	$(CXX) 04a.cc $(LIBCXX) $(OPT) $(STD) -o 04a.c++
