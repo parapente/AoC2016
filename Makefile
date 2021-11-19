@@ -4,7 +4,7 @@ OPT=-g -pedantic -Wall -Wfatal-errors
 STD=-std=c++17
 PROGS=01a.c++ 01b.c++ 02a.c++ 02b.c++ 03a.c++ \
 	  04a.c++ 04b.c++ 05a.c++ 05b.c++ 06a.c++ 06b.c++ \
-	  07a.c++ 07b.c++
+	  07a.c++ 07b.c++ 08.c++
 
 all: $(PROGS)
 
@@ -46,6 +46,9 @@ all: $(PROGS)
 
 07b.c++: 07b.cc
 	$(CXX) 07b.cc $(LIBCXX) $(OPT) $(STD) -o 07b.c++
+
+08.c++: 08.cc
+	$(CXX) 08.cc $(LIBCXX) $(OPT) $(STD) -o 08.c++
 
 clean:
 	rm -f *.c++
